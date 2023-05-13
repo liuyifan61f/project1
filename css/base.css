@@ -14,7 +14,7 @@ li,
 dl,
 dt,
 dd,
-input,textarea {
+input{
   margin: 0;
   padding: 0;
 }
