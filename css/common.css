@@ -1,0 +1,225 @@
+/* 各个页面相同的样式表,如:头,尾 */
+/* 版心 */
+.wrapper{
+    width: 1240px;
+    margin: 0 auto;
+}
+.shortcut{
+    height:52px ;
+    background-color: #333;
+}
+.shortcut .wrapper{
+    height: 52px;
+    /* background-color: pink; */
+}
+.shortcut .wrapper ul{
+    /* 先整个ul要右浮动 */
+    float: right;
+}
+.shortcut .wrapper li{
+    /* 里面的li左浮动 */
+    float: left;    
+}
+.shortcut .wrapper li a{
+    /* 使a的大小为文字加内边距,a的高度就是文字的高度14px ,行高不计入a的高度,只用于调节垂直位置*/
+    padding: 0 16px;
+    border-right:1px solid #666;
+    line-height: 52px;
+	font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #dcdcdc;
+
+
+}
+.shortcut .wrapper li .lasta{
+    border: 0;
+}
+.shortcut .wrapper li span{
+    /* 转换成inline-block最合适因为可以和文字在一行显示,是不换行的 */
+    display: inline-block;
+    margin-right: 8px;
+    width: 13px;
+    height: 17px;
+    background-image: url(../images/sprites.png);
+    background-position: -159px -70px;
+    /* 图跟文字对不齐,是因为行内的基线按文字处理 */
+    vertical-align: middle;
+    
+}
+/* 头部 */
+
+.header {
+    height: 70px;
+    margin-top: 30px;
+}
+.header a img{
+    float: left;
+    width: 207px;
+    height: 70px;
+
+}
+.header ul{
+    float: left;
+    margin-left: 40px;
+}
+.header li{
+    float: left;
+    padding-right: 48px;
+    line-height: 70px;
+
+}
+.header li a{
+    font-family: PingFangSC-Regular;
+    /* 为了hover的下滑线 */
+    padding-bottom: 7px;
+}
+.header li a:hover{
+    border-bottom: #27ba9b 1px solid;
+    color: #27ba9b;
+}
+/* 搜索 */
+.header .search{
+    float: left;
+    /* 82-48=32 */
+    margin-left: 34px; 
+    margin-top: 23px;
+    width: 172px;
+    height: 30px;
+    /* 描边 */
+    border-bottom: #e7e7e7 2px solid;   
+}
+.header .search span{
+    display:inline-block;
+    /* 为了使搜索图标右侧的一点区域也可以点因为padding属于本身的大小 */
+    padding-right: 11px;
+    width: 17px;
+    height: 17px;
+    background-image: url(../images/sprites.png);
+    background-position: -80px -70px;
+    /* 图标与输入框不齐 */
+    vertical-align: middle;
+}
+.header .search input{
+    width: 140px;
+    
+}
+/* 仅为placeholder修改字体，人们输入的还是正常的字体::placeholder */
+.header .search input::placeholder{
+    font-size: 14px;
+    color: #ccc;
+}
+/* 购物车 */
+.header .car{
+    /* a span这些都是行内,不显示要想是否display了 */
+    float: left;
+    display: block;
+    /* float的不能用auto居中,只能用具体的值或line-height(行内) */
+    margin-left: 15px;
+    margin-top: 24px ;
+    width: 22px;
+    height: 22px;
+    background-image: url(../images/sprites.png);
+    background-position: -120px -70px;
+    position: relative;
+}
+.header .car div{
+    width: 20px;
+	height: 15px;
+	background-color: #e26237;
+	border-radius: 8px;
+    text-align: center;
+    line-height: 15px;
+    font-family: PingFangSC-Medium;
+	font-size: 13px;
+	color: #ffffff;
+    position: absolute;
+    left: 12px;
+    top: -5px;
+}
+/* footer */
+.footer{
+    width: 100%;
+    height: 344px;
+    background-color: #333;
+    margin-top: 50px;
+}
+.footer .top{
+    border-bottom: #434343 3px solid;
+    width: 1393px;
+    height: 174px;
+    /* background-color: pink; */
+
+}
+.footer .top ul{
+   height: 58px;
+   margin-top: 58px;
+   margin-left: 135px;
+}
+.footer .top li{
+    float: left;
+    margin-right: 300px;
+    height: 58px;
+    line-height: 58px;
+    font-family: PingFangSC-Light;
+	font-size: 28px;
+    color: #fff;
+}
+.footer .top li:nth-last-child(1){
+    margin-right: 0;
+}
+.footer .top li span{
+    float: left;
+    display: block;
+    width: 58px;
+    height: 58px;
+    background-image: url(../images/sprites.png);
+    margin-right: 14px;
+    
+}
+.footer .top li .jiage{
+    background-position: 0 0;
+}
+.footer .top li .wuliu{
+    background-position: -64px 0;
+}
+.footer .top li .pinzhi{
+    background-position: -131px 0;
+}
+.footer .bottom{
+    height: 48px;
+    margin-left: 428px;
+    margin-top: 41px;
+}
+.footer .bottom ul{
+    height: 14px;
+}
+.footer .bottom li{
+    float: left;
+    height: 14px;
+    padding: 0 9px;
+    border-right: 1px solid #999;
+    
+}
+.footer .bottom li a{
+    display: block;
+    font-family: PingFangSC-Light;
+	font-size: 14px;
+    line-height: 14px;
+    /* a行内标签不能加行高，无效，要么display再加，要么用virtical-align试试调整对齐，如果都不行只能用定位了*/
+	color: #999999;
+    /* vertical-align: top; */
+}
+.footer .bottom li:first-child{
+    padding-left: 0;
+}
+.footer .bottom li:last-child{
+    border: 0;
+}
+.footer .bottom .copyright{
+    margin-left: 196px;
+    margin-top: 15px;
+    font-size: 14px;
+	color: #999999;
+    
+    
+}

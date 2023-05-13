@@ -1,0 +1,484 @@
+/* 首页样式表 */
+/* banner */
+.banner{
+    margin-top: 30px;
+    height: 500px;
+    background-color: #f5f5f5;
+}
+.banner .wrapper{
+    height: 500px;
+    background-image: url(../uploads/banner_1.png);
+    background-color: pink;
+    position: relative;
+}
+.banner .wrapper .aside{
+    float: left;
+    width: 251px;
+    height: 500px;
+    background-color: #000000;
+	opacity: 0.8;
+}
+.banner .wrapper .aside li a{
+    display: block;
+    width: 251px;
+    height: 50px;
+    padding-right: 19px;
+    padding-left: 36px;
+    line-height: 50px;
+    font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #ffffff;
+    
+}
+.banner .wrapper .aside li a span{
+    float: right;
+    display: block;
+    margin-top: 19px;
+    width:6px ;
+    height: 11px;
+    background-image: url(../images/sprites.png);
+    background-position: -80px -110px;
+}
+.banner .wrapper .aside li a:hover{
+    background-color: #27ba9b;
+}
+.banner .wrapper .prev{
+    float: left;
+    display: block;
+    margin-left: 9px;
+    margin-top: 228px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #000000;
+    opacity: 0.2;
+}
+.banner .wrapper .prev span{
+    /* 精灵图看不到首先想到display */
+    display: block;
+    margin-top: 11px;
+    margin-left: 14px;
+    width: 13px;
+    height: 24px;
+    background-image: url(../images/sprites.png);
+    /* 这个bgp既改变精灵图在大图的位置，有改变精灵图在圆中的位置，处理方式可以是检查元素调整，也可以margin */
+    background-position: 0 -70px;
+}
+.banner .wrapper .next{
+    float: right;
+    display: block;
+    margin-right: 10px;
+    margin-top: 228px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #000000;
+    opacity: 0.2;
+}
+.banner .wrapper .next span{
+    /* 精灵图看不到首先想到display */
+    display: block;
+    margin-top: 11px;
+    margin-left: 16px;
+    width: 13px;
+    height: 24px;
+    background-image: url(../images/sprites.png);
+    background-position: -40px -70px;
+}
+.banner .wrapper ol{
+    /* 用定位positionposition调整，定位有四个方位词，bgp有两个属性值水平和垂直 */
+    position: absolute;
+    left: 680px;
+    bottom: 31px;
+    height: 10px;
+    width: 200px;
+    
+}
+.banner .wrapper ol li{
+    float: left;
+    margin-right: 24px;
+    width: 10px;
+    height: 10px;
+    background-color:#fff;
+    opacity: 0.43;
+    border-radius: 50%;
+    /* 非a的手动加点击 */
+    cursor: pointer;
+}
+.banner .wrapper ol .current{
+    opacity: 1;
+}
+
+/* 新鲜好物 */
+.goods{
+    margin-top: 48px;
+}
+.goods .hd{
+    height: 30px;
+}
+.goods .hd h2{
+    float: left;
+	font-family: PingFangSC-Regular;
+	font-size: 29px;
+	font-weight: normal;
+    line-height: 29px;
+    color: #333;
+}
+.goods .hd>span{
+    float: left;
+    margin-left: 34px;
+    margin-top: 10px;
+    font-family: PingFangSC-Regular;
+	color: #999999;
+}
+.goods .hd a{
+    display: block;
+    float: right;
+    margin-top: 10px;
+    width: 85px;
+    height: 16px;
+    font-family: PingFangSC-Regular;
+	color: #999999;
+}
+.goods .hd a span{
+    float: right;
+    display:block;
+    margin-top: 7px;
+    width: 7px;
+	height: 13px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 -110px;
+    
+    
+}
+.goods .bd{
+    margin-top: 37px;
+}
+.goods .bd li{
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+}
+.goods .bd li:nth-child(4n){
+    margin-right: 0;
+}
+.goods .bd li b{
+    /* 有定位可以不转块 */
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    padding-left: 3px;
+    padding-top:5px;
+    width: 28px;
+	height: 51px;
+	border: 1px solid #27ba9b;
+    border-radius: 2px;
+    font-family: PingFangSC-Regular;
+	font-size: 18px;
+    line-height: 18px;
+    font-weight: normal;
+	color: #27ba9b;
+}
+
+.goods .bd li img{
+    width: 304px;
+    height: 305px;
+}
+.goods .bd li div{
+    text-align: center;
+    margin-top: 22px;
+    font-family: PingFangSC-Regular;
+	font-size: 20px;
+    /* 为了控制行高所占的间距 */
+    line-height: 20px;
+}
+.goods .bd li div span{
+    display: block;
+    margin-top: 19px;
+    font-family: PingFangSC-Medium;
+	font-size: 23px;
+    /* 为了控制行高造成的间距 */
+    line-height: 23px;
+	color: #9a2e1f;
+}
+
+
+/* 人气推荐 */
+.popular{
+    margin-top: 48px;
+}
+.popular .hd{
+    height: 30px;
+}
+.popular .hd h2{
+    float: left;
+	font-family: PingFangSC-Regular;
+	font-size: 29px;
+	font-weight: normal;
+    line-height: 29px;
+    color: #333;
+}
+.popular .hd>span{
+    float: left;
+    margin-left: 34px;
+    margin-top: 10px;
+    font-family: PingFangSC-Regular;
+	color: #999999;
+}
+.popular .bd{
+    margin-top: 37px; 
+    
+}
+.popular .bd li{
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    
+}
+.popular .bd li:nth-child(4n){
+    margin-right: 0;
+}
+.popular .bd li img{
+    width: 304px;
+    height: 305px;
+}
+.popular .bd li div{
+    text-align: center;
+    margin-top: 22px;
+    font-family: PingFangSC-Regular;
+	font-size: 21px;
+    line-height: 21px;
+}
+.popular .bd li div span{
+    display: block;
+    margin-top: 18px;
+    font-family: PingFangSC-Regular;
+	color: #999999;
+    /* 否则会继承div的字体23px */
+    font-size: 16px;
+    line-height: 16px;
+} 
+
+
+/* 热门品牌 */
+.brand{
+    margin-top: 55px;
+    
+    background-color: #f5f5f5;
+}
+.brand .wrapper{
+    margin-top: 42px;
+    height: 390px;
+    
+}
+.brand .wrapper .hd{
+    height: 73px;
+    padding-bottom: 16px;
+}
+.brand .wrapper .hd h2{
+    float: left;
+	font-family: PingFangSC-Regular;
+	font-size: 29px;
+	font-weight: normal;
+    line-height: 29px;
+    color: #333;
+}
+.brand .wrapper .hd>span{
+    float: left;
+    margin-left: 34px;
+    margin-top: 10px;
+    font-family: PingFangSC-Regular;
+	color: #999999;
+}
+.brand .wrapper .hd .prev{
+    float: left;
+    margin-left: 1191px;
+    margin-right: 9px;
+    width: 20px;
+	height: 20px;
+	background-color: #e2e2e2;
+    text-align: center;
+    cursor: pointer;
+}
+.brand .wrapper .hd .next{
+    float: right;
+    width: 20px;
+	height: 20px;
+	background-color: #e2e2e2;
+    text-align: center;
+    cursor: pointer;
+}
+.brand .wrapper .hd .prev:hover,.brand .wrapper .hd .next:hover{
+    background-color: #27ba9b;
+}
+/* .brand .wrapper .hd .prev span{
+	width: 7px;
+	height: 13px;
+    background-image: url(../images/sprites.png);
+    background-color: blue;
+    background-position: 0 0;
+} */
+.brand .wrapper .bd li{
+    float: left;
+    width: 244px;
+    height: 306px;
+    margin-right: 5px;
+}
+.brand .wrapper .bd li:nth-child(5n){
+    margin-right: 0;
+}
+.brand .wrapper .bd li img{
+    width: 244px;
+    height: 306px;
+}
+
+
+/* 生鲜 */
+.shengxian{
+    margin-top: 34px; 
+}
+.shengxian .hd{
+    height: 28px;
+}
+.shengxian .hd h2{
+    float: left;
+    font-family: PingFangSC-Regular;
+	font-size: 29px;
+    line-height: 29px;
+    font-weight: normal;
+}
+.shengxian .hd ul{
+    float: left;
+    height: 20px;
+    margin-top: 6px;
+    margin-left: 674px;
+    
+}
+.shengxian .hd ul li{
+    float: left;
+}
+.shengxian .hd li a{
+    display: block;
+    margin-right: 5px;
+    padding: 2px 7px;
+    line-height: 16px;
+    font-family: PingFangSC-Regular;
+    
+        
+}
+.shengxian .hd li a:hover{
+    background-color: #27ba9b;
+}
+.shengxian .hd>a{
+    float: right;
+    margin-top: 8px;
+    font-family: PingFangSC-Regular;
+	color: #999999;
+    line-height: 16px;
+}
+.shengxian .hd>a span{
+    float: right;
+    display: block;
+    margin-left: 15px;
+    width: 7px;
+    height: 13px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 -110px;
+    margin-top: 2px;
+}
+.shengxian .bd{
+    margin-top: 34px;
+   
+
+}
+.shengxian .bd .left{
+    float: left;
+    position: relative;
+}
+.shengxian .bd .left a img{
+    display: block;
+    width: 240px;
+    height: 610px;   
+}
+.shengxian .bd .right{
+    float: left;
+    width: 992px;
+    margin-left: 7px;
+}
+.shengxian .bd .right li{
+    position: relative;
+    float: left;
+    width: 242px;
+	height: 304px;
+    margin-right: 8px;
+    margin-bottom: 3px;
+    padding-left: 28px;
+    padding-top: 8px;
+    border: solid 2px #fff;
+
+}
+.shengxian .bd .right li:hover{
+    /* hover后位置变动因为之前没有border加了后造成尺寸变大，可以为之前的加白色border */
+    border: solid 2px #27ba9b;
+}
+.shengxian .bd .right li:nth-child(4n){
+    margin-right: 0;
+}
+.shengxian .bd .right li img{
+    width: 184px;
+    height: 184px;
+}
+.shengxian .bd .right li .caption{
+    margin-top: 12px;
+    font-family: PingFangSC-Regular;
+}
+.shengxian .bd .right li .caption span{
+    font-size: 17px;
+	color: #9a2e1f;
+
+}
+.shengxian .bd .right li .caption b{
+    font-size: 22px;
+	font-weight: normal;
+	color: #9a2e1f;
+    font-family: PingFangSC-Medium;
+}
+.shengxian .bd .right li .findsimilar{
+    position: absolute;
+    top: 218px;
+    left: -2px;
+    display: none;
+    width: 241px;
+	height: 84px;
+	background-color: #27ba9b;
+}
+    /* 是li:hover 后findsimilar显示*/
+.shengxian .bd .right li:hover .findsimilar{
+    display: block;
+}
+
+.shengxian .bd .right li .findsimilar .box1{
+    width: 125px; 
+    margin-left: 54px;
+    margin-top: 19px;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #a9dbcc;
+    line-height: 18px;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+	font-size: 18px;
+	color: #ffffff;
+}
+.shengxian .bd .right li .findsimilar .box2{
+    margin-left: 75px;
+    margin-top: 8px;
+    width: 88px;
+	height: 13px;
+	font-family: PingFangSC-Regular;
+	font-size: 13px;
+	color: #ffffff;
+}
